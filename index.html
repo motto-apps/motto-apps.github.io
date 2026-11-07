@@ -34,10 +34,6 @@
   .num { flex:none; width:26px; height:26px; border-radius:50%; border:1px solid var(--accent); color:var(--accent);
          font-family:"Playfair Display",serif; font-size:13px; display:flex; align-items:center; justify-content:center; }
 
-  .note { margin-top:26px; font-size:12px; line-height:2; color:var(--muted); }
-  .btn { display:inline-block; margin-top:18px; padding:13px 30px; border-radius:999px; border:1px solid var(--ink);
-         color:var(--ink); text-decoration:none; font-size:14px; letter-spacing:.08em; background:transparent; }
-  .quote { margin-top:auto; padding-top:36px; font-size:12px; color:var(--muted); letter-spacing:.1em; }
 
   #normal { margin-top:30vh; color:var(--muted); font-size:14px; line-height:2.2; }
   #normal a { color:var(--muted); }
@@ -61,8 +57,6 @@
       <div class="step"><span class="num">2</span>「ブラウザで開く」をタップ</div>
       <div class="step"><span class="num">3</span>開いたページからアプリを選ぶ</div>
     </div>
-    <p class="note">TikTokの中ではApp Storeを開けないため<br>ブラウザでの表示をお願いしています</p>
-    <a class="btn" id="openBtn" href="#">ブラウザで開く</a>
   </div>
 
 <script>
@@ -72,7 +66,6 @@
   if (isTikTok) {
     document.getElementById('normal').classList.add('hidden');
     document.getElementById('guide').classList.remove('hidden');
-    document.getElementById('openBtn').href = 'x-safari-' + TARGET;
   } else {
     location.replace(TARGET);
   }
